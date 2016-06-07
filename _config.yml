@@ -16,8 +16,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+permalink: '/blog/:title/'
 
 # Build settings
 markdown: kramdown
 
 source: ./src
+
+prose:
+  rooturl: 'src/_posts'
+  media: 'src/blog/media'
+  metadata:
+    "src/_posts":
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
